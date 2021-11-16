@@ -1,0 +1,7 @@
+photos/*
+photos_c/*
+track/*
+!photos/.gitkeep
+!photos_c/.gitkeep
+!track/.gitkeep
+config.php

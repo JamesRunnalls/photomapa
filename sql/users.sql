@@ -1,0 +1,1 @@
+CREATE TABLE `photomap`.`users` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `email` VARCHAR(250) NOT NULL , `username` VARCHAR(250) NOT NULL , `password` VARCHAR(250) NOT NULL , `guestpassword` VARCHAR(250) NOT NULL , `payment` VARCHAR(250) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

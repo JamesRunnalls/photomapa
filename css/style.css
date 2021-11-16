@@ -1,0 +1,840 @@
+html,body {
+	font-family: Roboto, sans-serif;
+    font-weight: 100;
+    letter-spacing: 1.1px;
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+/* Loading */
+
+.loading {
+	background: white url('../img/loading.gif') center center no-repeat;
+}
+
+/* Drop down menu */
+
+.dropdown {
+    position: relative;
+    display: inline-block; 
+}
+
+.dropdown-button {
+    position: fixed;
+    width: 50px;
+    left:20px;
+    top:15px;
+    transition: transform .2s;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.dropdown-button:hover{
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+}
+
+.dropdown-content {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight:500;
+    display: none;
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0px;
+    top: 75px;
+    z-index: 50;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Map */ 
+
+.leaflet-popup-content {
+	margin-bottom: 10px!important;
+	margin-left: 0px!important;
+	margin-right: 0px!important;
+	margin-top: 0px!important;
+	width: 300px!important;
+}
+
+.leaflet-popup-content-wrapper {
+	padding: 0px!important;
+	padding-bottom: 5px!important;
+	background: rgba(255,255,255,0.7)!important;
+	border-radius: 0px!important;
+}
+
+.leaflet-popup-tip {
+	background: rgba(255,255,255,0.7)!important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	color:black!important;
+}
+
+/* Footer */
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    text-align: right;
+    z-index: 1000;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footerbox{
+	padding-right: 10px;
+}
+
+.footer-input{
+    width: calc(70px + 3vw);
+	text-decoration: none;
+    background-color: rgba(0,0,0,0.3)!important;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white!important;
+    cursor: pointer;
+}
+
+.upload {
+	height: 70px;
+	border: 2px dashed white;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 8px;
+	padding-top: 20px;
+	padding-left: 15px;
+	max-width: 100%;
+}
+
+input[type=submit] {
+    background-color: #0095D1;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin:2px;
+}
+
+input[type=submit]:hover {
+	background-color: #0080b3!important;
+}
+
+/* Background */
+
+#background {
+    background-image: url("../img/collage.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	margin-top: -38px;
+	padding: 0;
+}
+
+/* Sign Up Form */
+
+.signupform {
+	position: fixed;
+	width: 100%;
+	margin: auto;
+	top: 50%;
+	transform: translate(0%, -50%);
+	z-index: 100;
+	background-color: rgba(255,255,255,0.6);
+	box-shadow: 0px 0px 56px -2px rgba(143,143,143,0.92);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.outside {
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+.imgblock {
+	display: inline-block;
+	margin-right: 12%;
+	vertical-align: top;
+	max-width: 500px;
+}
+
+.form-outer {
+	box-sizing: border-box;
+	width: 400px;
+	max-width: 100%;
+	display: inline-block;
+	margin:auto;
+}
+
+.form-top {
+	text-align: center;
+	background-color: rgb(246, 248, 250);
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.form-bottom {
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+/* Style flex-container */ 
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    flex: 25%;
+    width: 25%;
+    height: 400px;
+    overflow: hidden;
+}  
+
+@media (max-width: 1100px) {
+    .flex-container > div {
+        flex: 50%;
+        width: 50%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .flex-container > div {
+        flex: 100%;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.bluebutton {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 3px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+	height:27px;
+}
+
+.uploadbutton {
+    position: fixed; 
+    right:20px;
+    bottom:8px;
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;
+}
+.uploadbutton:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.settings {
+    position: fixed; 
+    left:20px;
+    top:15px;
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;
+}
+.settings:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.photomap {
+    transition: transform .2s;
+    position: fixed; 
+    right:18px;
+    top:15px;
+    width: 50px;
+    height: 50px;
+}
+
+.photomap:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.photogallery {
+    transition: transform .2s;
+    position: absolute; 
+    right:18px;
+    top:8px;
+    width: 50px;
+    height: 50px;
+}
+
+.photogallery:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.mapw {
+    transition: transform .3s;
+    width: 25px;
+    height: 25px;
+}
+
+.mapw:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.calendar {
+    transition: transform .3s;
+    width: 25px;
+    height: 25px;
+}
+
+.calendar:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.alt {
+    transition: transform .3s;
+    width: 25px;
+    height: 25px;
+}
+
+.alt:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.filterbutton {
+    position: fixed; 
+    left:20px;
+    bottom:8px;
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;
+}
+
+.filterbutton:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.savebutton {
+    position: fixed;
+    left: 50%;
+    margin-left: -125px;
+    bottom:60px;
+    width: 250px;
+    transition: transform .2s;
+}
+
+.savebutton:hover{
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+}
+
+/* Copyright symbol */
+
+cr {
+    padding-top:25px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 10px;
+    bottom: 2px;
+    right:2px;
+    position: fixed; 
+}
+
+.photo{
+    position: fixed;
+    right: 50px;
+    top:50px;
+    width: 200px;
+    z-index: 1;
+}
+
+.textbox {
+	font-size: 20px;
+	text-align: right;
+	line-height: 1.8;
+}
+
+.logo{
+	width: 500px;
+	padding-top: 150px;
+}
+
+.logo2{
+	width: 500px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.toplogo {
+	position: relative;
+	padding-top: 20px;
+	padding-left: 20px;
+	width: 500px;
+	max-width: 80%;
+	display: none;
+}
+
+.tl {
+    position: absolute; 
+    left:80px;
+    top:40px;
+    max-height: 20%;
+    max-width: 20%;
+    z-index: -5;
+}
+.tr {
+    position: absolute; 
+    right:80px;
+    top:40px;
+    max-height: 20%;
+    max-width: 20%;
+    z-index: -5;
+}
+.bl {
+    position: absolute; 
+    left:80px;
+    bottom:40px;
+    max-height: 20%;
+    max-width: 20%;
+    z-index: -5;
+}
+.br {
+    position: absolute; 
+    right:80px;
+    bottom:40px;
+    max-height: 20%;
+    max-width: 20%;
+    z-index: -5;
+}
+/* Style zoom on hover */
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img:hover {
+    height:110%;
+    width: 110%;
+    object-fit: cover;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+}
+
+/* Style layout */
+    
+#gallery {
+    height: 100%;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    position: relative;
+      }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 5px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color:rgba(0, 0, 0, 0.8);  
+}
+
+/* Modal Content */
+.modal-content {
+  margin-top: 10%;
+  width: auto;
+  height: auto;
+}
+
+.modal-content-hidden {
+	min-width: 200px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	padding: 30px;
+	max-width: 250px;
+}
+
+.modaltext {
+    max-width: 80%;
+    max-height: 60vh;
+}
+
+.login{
+    color:black;
+    text-align: left;
+    line-height: 2;
+}
+
+.editboxcenter {
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* The Edit Button */
+.edit {
+    width: 18px;
+    height: 18px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.edit:hover,
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+h1 {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2.2;
+}
+
+h3 {
+    
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 10;
+}
+
+h4 {
+    
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 10;
+}
+
+h5 {
+  color: white;
+  font-size: 25px;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+h5:hover{
+    color:darkgray; 
+}
+
+h6 {
+    color: black;
+    line-height: 2;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+h7 {
+    color: black;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+h8 {
+    color: black;
+    font-size: 11px;
+    line-height: 1;
+}
+
+input[type=text]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+	padding-left: 5px;
+}
+
+select{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+	padding-left: 5px;
+}
+
+select option {
+	color:black;
+}
+
+input[type=email]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+	padding-left: 5px;
+}
+
+
+input[type=number]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+}
+
+input[type=password]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+	padding-left: 5px;
+}
+
+input[type=select]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+}
+
+
+input[type=date]{
+    background-color: rgba(0, 0, 0, 0);  
+    color: white;
+	border: 1px solid white;
+}
+
+input.index{
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    margin = 10px;
+    padding = 10px;
+}
+
+.button {
+    background-color: #0095D1;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+.button2 {
+    background:none!important;
+     color:inherit;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     border-bottom:1px solid #444; 
+     cursor: pointer;
+     font-size: 16px;
+}
+
+@media (max-width: 1300px) { /*breakpoint*/
+    .imgblock {
+        display: none;
+    }
+	.toplogo {
+		display: block;
+	}
+	
+	.signupform {
+		position:relative;
+		transform: none;
+		top: 30px;
+		
+	}
+}
+
+@media (min-width: 1300px) { /*breakpoint*/
+	@media (max-height: 570px) {
+		.signupform {
+		position:relative;
+		transform: none;
+		top: 0px;
+		
+		}
+	}
+}
+
+@media (max-width: 800px) { /*breakpoint*/
+    .toplogo {
+        width:300px
+    }
+}
+
+@media (max-width: 1000px) { /*breakpoint*/
+    .photo {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) { /*breakpoint*/
+    .photo {
+        display: none;
+    }
+}
+
+@media (max-height: 750px) { /*breakpoint*/
+    footer {
+        background-color: rgba(0,0,0,0.5);
+    }
+	.footer-input {
+		background-color: rgba(0,0,0,0);
+	}
+}

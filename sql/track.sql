@@ -1,0 +1,1 @@
+CREATE TABLE `photomap`.`track` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `file` VARCHAR(250) NOT NULL ,`username` VARCHAR(250) NOT NULL , `description` VARCHAR(250) NOT NULL , `payment` VARCHAR(250) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
