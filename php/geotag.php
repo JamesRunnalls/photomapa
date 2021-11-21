@@ -89,20 +89,15 @@ var file = type[0];
 document.getElementById("photo").innerHTML = '<img src="../photos_c/'+file+'" class="photo">';
 
 function savelocation(){   
- $.ajax({ 
-        type: 'post',
-        url: 'geotagconnect.php',
-        data: {
-            lat: lat,
-            lon: lon,
-            file: file
-        },
-        success: function( data ) {
-        }
-    });  
-    
-window.location.href = "../map.php#"+lat+"&"+lon;
-    
+	$.post("geotagconnect.php",
+	  {
+		lat: lat,
+		lon: lon,
+		file: file
+	},
+  function(data, status){
+    window.location.href = "../map.php#"+lat+"&"+lon;
+  });
  }
     
 if ( type.length == 3 && isNumeric(Number(type[1])) ) {
