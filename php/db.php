@@ -1,11 +1,15 @@
 <?php 
 
-$configs = include('../config.php');
+if (file_exists('./../config.php')) {
+    $configs = include('./../config.php');
+} else {
+    $configs = include('./config.php');
+}
 
 // Create connection
 
-$conn = new mysqli($configs['g_db_host'],$configs['g_db_username'],$configs['g_db_password'],$configs['g_db_db']);
-# $conn = new mysqli($configs['l_db_host'],$configs['l_db_username'],$configs['l_db_password'],$configs['l_db_db']);
+// $conn = new mysqli($configs['g_db_host'],$configs['g_db_username'],$configs['g_db_password'],$configs['g_db_db']);
+$conn = new mysqli($configs['l_db_host'],$configs['l_db_username'],$configs['l_db_password'],$configs['l_db_db']);
 
 // Check connection
 

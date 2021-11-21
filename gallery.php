@@ -127,7 +127,7 @@ if(!isset($_SESSION['sig']))
 				<div style="font-size:13px">Drop your file below. </div>
                 <input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple" class="upload"><br><br>
                 Description: <br><div id="desc_id"><input type="text" name="text" style="width:100%;"></div><br><br>
-                Accepted: <br>jpg, png, gpx, kml, fit. <br><br>
+                Accepted: <br>jpg, gpx, kml, fit. <br><br>
                 <input type="submit" value="Upload" name="submit" class="button">
 				<br><br><div id="uploadStatus"></div>
             </form>
