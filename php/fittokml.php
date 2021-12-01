@@ -1,17 +1,8 @@
 <?php
 
-
-$files = array_slice(scandir('../track'), 2);
 include('phpFITFileAnalysis.php');
-foreach($files as $item){
-    if (substr($item, -3) == "fit"){
-        
-        fit2kml($item);
-        unlink('../track/'.$item);  
-    }
-}
 
-   function fit2kml($file){
+function fit2kml($file){
 
     $options = ['fix_data' => ['all']];
     
@@ -46,6 +37,8 @@ foreach($files as $item){
     fwrite($fp, print_r($data, TRUE));
     fclose($fp);
     unset($pFFA);
+	unlink('../track/'.$file); 
+	return $file2;
    }
 
 ?>
